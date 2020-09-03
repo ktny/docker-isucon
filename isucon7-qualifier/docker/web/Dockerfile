@@ -17,4 +17,4 @@ RUN apt update && \
 
 COPY --from=build-dev /isubata /home/isucon/isubata
 #COPY --from=build-dev /isubata/files/app/nginx.conf /etc/nginx/conf.d/isucon.conf
-COPY isucon.conf /etc/nginx/conf.d/isucon.conf
+COPY isucon.conf /etc/nginx/nginx.conf
