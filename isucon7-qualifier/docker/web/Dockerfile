@@ -10,7 +10,7 @@ RUN \
 FROM nginx:1.10
 
 RUN apt update && \
-  apt install -y wget less unzip && \
+  apt install -y wget curl less unzip && \
   wget https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip && \
   unzip alp_linux_amd64.zip && \
   install alp /usr/local/bin/alp && \

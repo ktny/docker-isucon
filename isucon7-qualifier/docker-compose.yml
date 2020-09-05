@@ -23,6 +23,7 @@ services:
       - app
     ports:
       - "80:80"
+      - "19997:19999"
   app:
     build:
       context: ./docker/app/golang
@@ -43,6 +44,7 @@ services:
        - db
     ports:
       - "5000"
+      - "19999:19999"
     environment:
       ISUBATA_DB_USER: isucon
       ISUBATA_DB_PASSWORD: isucon
@@ -55,6 +57,7 @@ services:
     image: isucon7-qualifier-db
     ports:
       - "3306"
+      - "19998:19999"
     networks:
       - backend
     command: ["--character-set-server=utf8mb4"]

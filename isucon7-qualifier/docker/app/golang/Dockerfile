@@ -7,5 +7,6 @@ WORKDIR /home/isucon/isubata/webapp/go
 RUN make
 
 EXPOSE 5000
+EXPOSE 19999
 
 ENTRYPOINT ["/home/isucon/isubata/webapp/go/isubata"]
